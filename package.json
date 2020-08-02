@@ -2,7 +2,7 @@
   "name": "jd-express-jingcai",
   "version": "1.0.0",
   "description": "京彩",
-  "author": "J.COM",
+  "author": "JD.COM",
   "private": true,
   "scripts": {
     "serve": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
