@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="yes" name="apple-touch-fullscreen"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="#ffffff" name="msapplication-TileColor"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+  <script>
+    function calcRem () {
+      var deviceWidth = document.documentElement.clientWidth;
+      if (deviceWidth > 640) {
+        deviceWidth = 640;
+      } else if (deviceWidth < 320) {
+        deviceWidth = 320;
+      }
+      if (navigator.userAgent && navigator.userAgent.indexOf('iPad') > -1) {
+        deviceWidth = document.documentElement.clientWidth;
+      }
+      document.documentElement.style.fontSize = deviceWidth / 3.75 + 'px';
+    }
+    calcRem();
+    window.onresize = function () {
+      calcRem()
+    }
+  </script>
+  <script>
+    //主M页面加载时间
+    window.jdpts = {
+      _st: new Date
+    };
+  </script>
+  <!--腾讯云分析-->
+  <script>
+    var _mtac = {"senseQuery":1,"ignoreParams":"deliveryId,waybillCode,deliveryid,lng,lat,un_area,sid"};
+    (function() {
+      var mta = document.createElement("script");
+      mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+      mta.setAttribute("name", "MTAH5");
+      mta.setAttribute("sid", "500672427");
+      mta.setAttribute("cid", "500672428");
+
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(mta, s);
+    })();
+  </script>
+  <script charset="utf-8" src="https://wq.360buyimg.com/js/common/dest/wq.jshop.report.min.js"></script>
+  <!--子午线-->
+  <script type="text/javascript">
+    var jap = {
+      siteId : 'JA2020_2112874',
+      autoLogPv : true,
+      anchorpvflag: true, // spa 自动上报配置
+      anchorToUri: true, // hash 方式自动上报配置
+    };
+  </script>
+  <script type="text/javascript" src="https://wl.jd.com/unify.min.js"></script>
+  <script charset="utf-8" src="/express/jssdk.min.js"></script>
+  <script type="text/javascript" src="https://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script><!--引入微信公众平台js-->
+  <script>
+    window.onerror = function(a, b, c, d, e) {
+      var error = a+b+c+d+e;
+      window.MtaH5 && MtaH5.clickStat('app_log',{'error': error});
+      console.error('window.onerror: ', error)
+    }
+  </script>
+</head>
+<body>
+<noscript>
+  <strong>未开启javascript项目无法运行，请开启后刷新重试。</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>
